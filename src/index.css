@@ -1,0 +1,39 @@
+:root {
+  --rose-deep: #8b2942;
+  --rose-soft: #c97b8a;
+  --rose-pale: #f5e1e4;
+  --cream: #fdf8f6;
+  --gold: #c9a962;
+  --gold-light: #e8dcc4;
+  --ink: #2d2326;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--ink);
+  background: linear-gradient(165deg, var(--cream) 0%, var(--rose-pale) 50%, #f0e6e8 100%);
+  min-height: 100vh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}

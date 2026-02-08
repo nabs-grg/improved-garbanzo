@@ -1,0 +1,182 @@
+.proposal {
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+.proposal-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.2;
+  color: var(--rose-deep);
+  margin: 0 0 1rem;
+}
+
+.proposal-sub {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 400;
+  color: var(--ink);
+  opacity: 0.9;
+  margin: 0 0 2rem;
+}
+
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--rose-deep), var(--rose-soft));
+  color: white;
+  box-shadow: 0 4px 20px rgba(139, 41, 66, 0.35);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 28px rgba(139, 41, 66, 0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--rose-deep);
+  border: 2px solid var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold-light);
+  box-shadow: 0 4px 16px rgba(201, 169, 98, 0.25);
+}
+
+.btn-no {
+  background: var(--rose-pale);
+  color: var(--ink);
+  border: 2px solid var(--rose-soft);
+}
+
+.btn-no:hover {
+  background: #f0d4d8;
+}
+
+.btn-no:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-no:disabled:hover {
+  background: var(--rose-pale);
+}
+
+/* Step transitions */
+.step {
+  animation: fadeUp 0.6s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Celebration screen */
+.celebration .proposal-heading {
+  font-size: clamp(2rem, 7vw, 3rem);
+  color: var(--rose-deep);
+}
+
+.celebration .proposal-sub {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.heart {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  animation: float 4s ease-in-out infinite;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 25%; animation-delay: 0.5s; }
+.heart:nth-child(3) { left: 40%; animation-delay: 1s; }
+.heart:nth-child(4) { left: 60%; animation-delay: 1.5s; }
+.heart:nth-child(5) { left: 75%; animation-delay: 2s; }
+.heart:nth-child(6) { left: 90%; animation-delay: 2.5s; }
+.heart:nth-child(7) { left: 15%; animation-delay: 3s; top: 60%; }
+.heart:nth-child(8) { left: 85%; animation-delay: 3.5s; top: 70%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confettiFall 3s ease-out forwards;
+}
+
+.confetti-piece:nth-child(odd) { border-radius: 50%; }
+.confetti-piece:nth-child(3n) { width: 8px; height: 16px; }
+.confetti-piece:nth-child(5n) { width: 14px; height: 6px; }
+
+@keyframes confettiFall {
+  from {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0.8;
+  }
+}
+
+.sure-msg {
+  font-style: italic;
+  color: var(--rose-soft);
+  margin-top: 1rem;
+  font-size: 1rem;
+}
