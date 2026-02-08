@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import coupleImage from './assets/couple.jpg';
 import './App.css';
 
 const STEPS = {
@@ -97,6 +98,7 @@ function App() {
             <h1 className="proposal-heading">You said yes! 💕</h1>
             <p className="proposal-sub">Can't wait to be your Valentine.</p>
             <p className="proposal-sub">I love you ❤️</p>
+            <img src={coupleImage} alt="Us" className="celebration-photo" />
           </>
         )}
       </main>

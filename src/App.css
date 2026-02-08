@@ -113,6 +113,16 @@
   margin-bottom: 0.5rem;
 }
 
+.celebration-photo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 32px rgba(139, 41, 66, 0.2);
+  object-fit: cover;
+}
+
 .hearts {
   position: fixed;
   inset: 0;

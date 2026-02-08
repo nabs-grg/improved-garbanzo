@@ -22,8 +22,8 @@ export default defineConfig({
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        type: 'asset',
+        test: /\.(svg|png|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.(jsx?|tsx?)$/,
