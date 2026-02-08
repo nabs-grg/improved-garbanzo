@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './App.css';
 
 const STEPS = {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <>
+      <SpeedInsights />
       {showConfetti && (
         <div className="confetti" aria-hidden>
           {Array.from({ length: 50 }).map((_, i) => (
